@@ -36,7 +36,10 @@ const Sidebar = ({
       <h2>Primary Optimization</h2>
         <select name="variables" id="variables">
           {variables.map((variable) => (
-            <option key={variable} value={variable}>
+            <option 
+              key={variable} 
+              value={variable}
+            >
               {variable}
             </option>
           ))}
@@ -63,7 +66,6 @@ const Sidebar = ({
           setConstraints={setConstraints}
         />
       </div>
-      <button>Optimize my meal!</button>
     </form>
   </div>
 }
