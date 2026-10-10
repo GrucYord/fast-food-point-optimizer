@@ -72,6 +72,8 @@ function App() {
         selectedRestaurant={selectedRestaurant}
         handleResturantSelect={handleResturantSelect}
         handleOptimizationTypeClick={setOptimizationType}
+        constraints={constraints}
+        setConstraints={setConstraints}
       />
       <Results recommendations={recommendations} />
     </>

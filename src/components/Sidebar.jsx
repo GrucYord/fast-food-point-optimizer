@@ -1,10 +1,12 @@
-import Constraint from "./Constraint"
+import Constraints from "./Constraints"
 
 const Sidebar = ({
   restaurantData,
   selectedRestaurant,
   handleResturantSelect,
-  handleOptimizationTypeClick
+  handleOptimizationTypeClick,
+  constraints,
+  setConstraints,
 }) => {
   const restaurantTitles = restaurantData.map(
     restaurant => restaurant.title
@@ -55,7 +57,11 @@ const Sidebar = ({
 
       <div>
         <h2>Constraints</h2>
-        <Constraint variables={variables}/>
+        <Constraints
+          variables={variables}
+          constraints={constraints}
+          setConstraints={setConstraints}
+        />
       </div>
       <button>Optimize my meal!</button>
     </form>
