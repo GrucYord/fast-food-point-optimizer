@@ -1,0 +1,415 @@
+[
+    {
+        "title": "McDonald's",
+        "foods": [
+            {
+                "id": 200307,
+                "title": "Sausage, Egg & Cheese McGriddles",
+                "info": {
+                    "points": 7000,
+                    "calories": 550,
+                    "protein": 19,
+                    "carbohydrates": 44,
+                    "fats": 33,
+                    "cholesterol": 235,
+                    "dietary_fiber": 2,
+                    "sugars": 15,
+                    "calcium": 190,
+                    "iron": 3,
+                    "potassium": 270
+                }
+            },
+            {
+                "id": 200567,
+                "title": "Chicken McNuggets 10 piece",
+                "info": {
+                    "points": 7000,
+                    "calories": 410,
+                    "protein": 23,
+                    "carbohydrates": 26,
+                    "fats": 24,
+                    "cholesterol": 65,
+                    "dietary_fiber": 1,
+                    "sugars": 0,
+                    "calcium": 15,
+                    "iron": 1,
+                    "potassium": 360
+                }
+            },
+            {
+                "id": 200096,
+                "title": "McFlurry with M&M'S Chocolate Candies",
+                "info": {
+                    "points": 7000,
+                    "calories": 570,
+                    "protein": 11,
+                    "carbohydrates": 85,
+                    "fats": 19,
+                    "cholesterol": 35,
+                    "dietary_fiber": 2,
+                    "sugars": 74,
+                    "calcium": 370,
+                    "iron": 1,
+                    "potassium": 570
+                }
+            },
+            {
+                "id": 200101,
+                "title": "McFlurry with Oreo Cookies",
+                "info": {
+                    "points": 7000,
+                    "calories": 410,
+                    "protein": 10,
+                    "carbohydrates": 64,
+                    "fats": 13,
+                    "cholesterol": 35,
+                    "dietary_fiber": 1,
+                    "sugars": 48,
+                    "calcium": 310,
+                    "iron": 1,
+                    "potassium": 430
+                }
+            },
+            {
+                "id": 200300,
+                "title": "Bacon, Egg  & Cheese Biscuit",
+                "info": {
+                    "points": 7000,
+                    "calories": 460,
+                    "protein": 17,
+                    "carbohydrates": 39,
+                    "fats": 26,
+                    "cholesterol": 215,
+                    "dietary_fiber": 2,
+                    "sugars": 3,
+                    "calcium": 180,
+                    "iron": 3,
+                    "potassium": 240
+                }
+            },
+            {
+                "id": 200463,
+                "title": "Big Mac",
+                "info": {
+                    "points": 7000,
+                    "calories": 580,
+                    "protein": 25,
+                    "carbohydrates": 45,
+                    "fats": 34,
+                    "cholesterol": 85,
+                    "dietary_fiber": 3,
+                    "sugars": 7,
+                    "calcium": 120,
+                    "iron": 4,
+                    "potassium": 370
+                }
+            },
+            {
+                "id": 200325,
+                "title": "Hotcakes",
+                "info": {
+                    "points": 5000,
+                    "calories": 580,
+                    "protein": 9,
+                    "carbohydrates": 101,
+                    "fats": 15,
+                    "cholesterol": 40,
+                    "dietary_fiber": 2,
+                    "sugars": 45,
+                    "calcium": 130,
+                    "iron": 3,
+                    "potassium": 430
+                }
+            },
+            {
+                "id": 200563,
+                "title": "Frappe Mocha (Large)",
+                "info": {
+                    "points": 5000,
+                    "calories": 660,
+                    "protein": 11,
+                    "carbohydrates": 97,
+                    "fats": 26,
+                    "cholesterol": 95,
+                    "dietary_fiber": 1,
+                    "sugars": 81,
+                    "calcium": 340,
+                    "iron": "0.5",
+                    "potassium": 690
+                }
+            },
+            {
+                "id": 200464,
+                "title": "Frappe Caramel (Large)",
+                "info": {
+                    "points": 5000,
+                    "calories": 650,
+                    "protein": 11,
+                    "carbohydrates": 94,
+                    "fats": 26,
+                    "cholesterol": 80,
+                    "dietary_fiber": 1,
+                    "sugars": 84,
+                    "calcium": 320,
+                    "iron": 0,
+                    "potassium": 560
+                }
+            },
+            {
+                "id": 200445,
+                "title": "Filet-O-Fish",
+                "info": {
+                    "points": 5000,
+                    "calories": 380,
+                    "protein": 16,
+                    "carbohydrates": 38,
+                    "fats": 19,
+                    "cholesterol": 30,
+                    "dietary_fiber": 1,
+                    "sugars": 4,
+                    "calcium": 60,
+                    "iron": 2,
+                    "potassium": 280
+                }
+            },
+            {
+                "id": 200161,
+                "title": "Sausage McMuffin\u00ae with Egg",
+                "info": {
+                    "points": 5000,
+                    "calories": 480,
+                    "protein": 20,
+                    "carbohydrates": 30,
+                    "fats": 31,
+                    "cholesterol": 280,
+                    "dietary_fiber": 2,
+                    "sugars": 2,
+                    "calcium": 170,
+                    "iron": 3,
+                    "potassium": 260
+                }
+            },
+            {
+                "id": 200083,
+                "title": "Large French Fries",
+                "info": {
+                    "points": 5000,
+                    "calories": 480,
+                    "protein": 7,
+                    "carbohydrates": 65,
+                    "fats": 23,
+                    "cholesterol": 0,
+                    "dietary_fiber": 6,
+                    "sugars": 0,
+                    "calcium": 25,
+                    "iron": 2,
+                    "potassium": 1000
+                }
+            },
+            {
+                "id": 200306,
+                "title": "Sausage McGriddles",
+                "info": {
+                    "points": 3500,
+                    "calories": 430,
+                    "protein": 11,
+                    "carbohydrates": 41,
+                    "fats": 24,
+                    "cholesterol": 35,
+                    "dietary_fiber": 2,
+                    "sugars": 14,
+                    "calcium": 80,
+                    "iron": 3,
+                    "potassium": 180
+                }
+            },
+            {
+                "id": 203882,
+                "title": "Iced Coffee (Large)",
+                "info": {
+                    "points": 3500,
+                    "calories": 270,
+                    "protein": 2,
+                    "carbohydrates": 47,
+                    "fats": 8,
+                    "cholesterol": 30,
+                    "dietary_fiber": 0,
+                    "sugars": 38,
+                    "calcium": 70,
+                    "iron": 0,
+                    "potassium": 340
+                }
+            },
+            {
+                "id": 200574,
+                "title": "Chicken McNuggets\u00ae (6 piece)",
+                "info": {
+                    "points": 3500,
+                    "calories": 250,
+                    "protein": 14,
+                    "carbohydrates": 15,
+                    "fats": 15,
+                    "cholesterol": 40,
+                    "dietary_fiber": 0,
+                    "sugars": 0,
+                    "calcium": "0.5",
+                    "iron": 220,
+                    "potassium": 0
+                }
+            },
+            {
+                "id": 200267,
+                "title": "Sausage Burrito",
+                "info": {
+                    "points": 3500,
+                    "calories": 310,
+                    "protein": 13,
+                    "carbohydrates": 25,
+                    "fats": 17,
+                    "cholesterol": 170,
+                    "dietary_fiber": 1,
+                    "sugars": 2,
+                    "calcium": 140,
+                    "iron": 3,
+                    "potassium": 170
+                }
+            },
+            {
+                "id": 201234,
+                "title": "Medium French Fries",
+                "info": {
+                    "points": 3500,
+                    "calories": 320,
+                    "protein": 5,
+                    "carbohydrates": 43,
+                    "fats": 15,
+                    "cholesterol": 0,
+                    "dietary_fiber": 4,
+                    "sugars": 0,
+                    "calcium": 15,
+                    "iron": 1,
+                    "potassium": 650
+                }
+            },
+            {
+                "id": 200301,
+                "title": "Sausage Biscuit",
+                "info": {
+                    "points": 2000,
+                    "calories": 460,
+                    "protein": 11,
+                    "carbohydrates": 37,
+                    "fats": 30,
+                    "cholesterol": 35,
+                    "dietary_fiber": 2,
+                    "sugars": 2,
+                    "calcium": 70,
+                    "iron": 3,
+                    "potassium": 200
+                }
+            },
+            {
+                "id": 200480,
+                "title": "Cheeseburger",
+                "info": {
+                    "points": 2000,
+                    "calories": 300,
+                    "protein": 15,
+                    "carbohydrates": 31,
+                    "fats": 13,
+                    "cholesterol": 40,
+                    "dietary_fiber": 2,
+                    "sugars": 6,
+                    "calcium": 90,
+                    "iron": 3,
+                    "potassium": 210
+                }
+            },
+            {
+                "id": 200438,
+                "title": "McChicken",
+                "info": {
+                    "points": 2000,
+                    "calories": 390,
+                    "protein": 14,
+                    "carbohydrates": 38,
+                    "fats": 21,
+                    "cholesterol": 40,
+                    "dietary_fiber": 1,
+                    "sugars": 4,
+                    "calcium": 20,
+                    "iron": 2,
+                    "potassium": 310
+                }
+            },
+            {
+                "id": 200062,
+                "title": "Vanilla Cone",
+                "info": {
+                    "points": 1500,
+                    "calories": 200,
+                    "protein": 5,
+                    "carbohydrates": 33,
+                    "fats": 5,
+                    "cholesterol": 20,
+                    "dietary_fiber": 0,
+                    "sugars": 23,
+                    "calcium": 180,
+                    "iron": 1,
+                    "potassium": 240
+                }
+            },
+            {
+                "id": 200020,
+                "title": "Coffee (Small)",
+                "info": {
+                    "points": 1500,
+                    "calories": 5,
+                    "protein": 0,
+                    "carbohydrates": 1,
+                    "fats": 0,
+                    "cholesterol": 0,
+                    "dietary_fiber": 0,
+                    "sugars": 0,
+                    "calcium": 6,
+                    "iron": 0,
+                    "potassium": 160
+                }
+            },
+            {
+                "id": 200007,
+                "title": "Baked Hot Apple Pie",
+                "info": {
+                    "points": 1500,
+                    "calories": 230,
+                    "protein": 2,
+                    "carbohydrates": 33,
+                    "fats": 11,
+                    "cholesterol": 0,
+                    "dietary_fiber": 1,
+                    "sugars": 14,
+                    "calcium": 6,
+                    "iron": 1,
+                    "potassium": 70
+                }
+            },
+            {
+                "id": 200340,
+                "title": "Hash Browns",
+                "info": {
+                    "points": 1500,
+                    "calories": 140,
+                    "protein": 2,
+                    "carbohydrates": 18,
+                    "fats": 8,
+                    "cholesterol": 0,
+                    "dietary_fiber": 2,
+                    "sugars": 0,
+                    "calcium": 8,
+                    "iron": 1,
+                    "potassium": 240
+                }
+            }
+        ]        
+    }
+]
