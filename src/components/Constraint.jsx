@@ -1,11 +1,8 @@
-const Constraint = (metric) => {
+const Constraint = ({variables}) => {
   return <>
     <div>
-      <select name="cars" id="cars">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
+      <select name="variables" id="variables">
+        {variables.map(variable => <option value={variable}>{variable}</option>)}
       </select>
       <input
         type="number"
