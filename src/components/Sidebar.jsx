@@ -40,11 +40,13 @@ const Sidebar = ({
           ))}
         </select>
         <button
+          type="button"
           onClick={() => handleOptimizationTypeClick("min")}
         >
           Minimize
         </button>
         <button
+          type="button"
           onClick={() => handleOptimizationTypeClick("max")}
         >
           Maximize

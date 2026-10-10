@@ -2,7 +2,7 @@ const Constraint = ({variables}) => {
   return <>
     <div>
       <select name="variables" id="variables">
-        {variables.map(variable => <option value={variable}>{variable}</option>)}
+        {variables.map(variable => <option key={variable} value={variable}>{variable}</option>)}
       </select>
       <input
         type="number"

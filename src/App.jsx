@@ -19,9 +19,14 @@ function App() {
     protein: { min: 30 },
     calories: { max: 800 },
   });
+  
+  console.log(selectedRestaurant, optimizationType)
 
-  const handleResturantSelect = (e) => setSelectedRestaurant(e.target.value)
-
+  const handleResturantSelect = (e) => {
+    const restaurantTitle = e.target.value
+    const newSelectedRestaurant = restaurantData.find(restaurant => restaurant.title === restaurantTitle)
+    setSelectedRestaurant(newSelectedRestaurant)
+  }
   // Convert nutrient strings into numbers
   const foods = selectedRestaurant?.foods ?? [];
 
