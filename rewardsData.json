@@ -5,6 +5,7 @@
             {
                 "id": 200307,
                 "title": "Sausage, Egg & Cheese McGriddles",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_201907_9841_SausageEggCheeseMcGriddle_1564x1564-2:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 7000,
                     "calories": 550,
@@ -22,6 +23,7 @@
             {
                 "id": 200567,
                 "title": "Chicken McNuggets 10 piece",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202208_5280_10McNuggets_Stacked_Protein_1564x1564:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 7000,
                     "calories": 410,
@@ -39,6 +41,7 @@
             {
                 "id": 200096,
                 "title": "McFlurry with M&M'S Chocolate Candies",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202505_3830_MandMMcFlurry_1564x1564:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 7000,
                     "calories": 570,
@@ -56,6 +59,7 @@
             {
                 "id": 200101,
                 "title": "McFlurry with Oreo Cookies",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202002_3832_OREOMcFlurry_1564x1564-1:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 7000,
                     "calories": 410,
@@ -73,6 +77,7 @@
             {
                 "id": 200300,
                 "title": "Bacon, Egg  & Cheese Biscuit",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202405_0085_BaconEggCheeseBiscuit_1564x1564-1:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 7000,
                     "calories": 460,
@@ -90,6 +95,7 @@
             {
                 "id": 200463,
                 "title": "Big Mac",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202302_0005-999_BigMac_1564x1564-1:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 7000,
                     "calories": 580,
@@ -107,6 +113,7 @@
             {
                 "id": 200325,
                 "title": "Hotcakes",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202405_0031_3HotCakes_1564x1564-1:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 5000,
                     "calories": 580,
@@ -124,6 +131,7 @@
             {
                 "id": 200563,
                 "title": "Frappe Mocha (Large)",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202601_3491_MediumMochaFrappe_1564x1564-1:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 5000,
                     "calories": 660,
@@ -141,6 +149,7 @@
             {
                 "id": 200464,
                 "title": "Frappe Caramel (Large)",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202601_2842_MediumCaramelFrappe_1564x1564-1:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 5000,
                     "calories": 650,
@@ -158,6 +167,7 @@
             {
                 "id": 200445,
                 "title": "Filet-O-Fish",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202503_5926-999_Filet-O-Fish_HalfSlice_Protein_1564x1564:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 5000,
                     "calories": 380,
@@ -174,7 +184,8 @@
             },
             {
                 "id": 200161,
-                "title": "Sausage McMuffin\u00ae with Egg",
+                "title": "Sausage McMuffin with Egg",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_201907_0083_SausageEggMcMuffin_1564x1564-1:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 5000,
                     "calories": 480,
@@ -192,6 +203,7 @@
             {
                 "id": 200083,
                 "title": "Large French Fries",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202002_6053_LargeFries_1564x1564-1:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 5000,
                     "calories": 480,
@@ -209,6 +221,7 @@
             {
                 "id": 200306,
                 "title": "Sausage McGriddles",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_201911_6110_SausageMcGriddle_1564x1564-1:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 3500,
                     "calories": 430,
@@ -226,6 +239,7 @@
             {
                 "id": 203882,
                 "title": "Iced Coffee (Large)",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202601_1212_MediumIcedCoffee_1564x1564-1:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 3500,
                     "calories": 270,
@@ -242,7 +256,8 @@
             },
             {
                 "id": 200574,
-                "title": "Chicken McNuggets\u00ae (6 piece)",
+                "title": "Chicken McNuggets (6 piece)",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202208_0060_6McNuggets_Broken_Protein_1564x1564:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 3500,
                     "calories": 250,
@@ -260,6 +275,7 @@
             {
                 "id": 200267,
                 "title": "Sausage Burrito",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202004_0334_SausageBurrito_Alt_Protein_1564x1564:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 3500,
                     "calories": 310,
@@ -277,6 +293,7 @@
             {
                 "id": 201234,
                 "title": "Medium French Fries",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202002_8932_MediumFries_1564x1564-1:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 3500,
                     "calories": 320,
@@ -294,6 +311,7 @@
             {
                 "id": 200301,
                 "title": "Sausage Biscuit",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_201907_0062_SausageBiscuit_1564x1564-1:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 2000,
                     "calories": 460,
@@ -311,6 +329,7 @@
             {
                 "id": 200480,
                 "title": "Cheeseburger",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202302_0003-999_CheeseburgerAlt_Protein_1564x1564:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 2000,
                     "calories": 300,
@@ -328,6 +347,7 @@
             {
                 "id": 200438,
                 "title": "McChicken",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202302_4314-999_McChicken_1564x1564-1:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 2000,
                     "calories": 390,
@@ -345,6 +365,7 @@
             {
                 "id": 200062,
                 "title": "Vanilla Cone",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202106_0336_LargeVanillaCone_1564x1564-1:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 1500,
                     "calories": 200,
@@ -362,6 +383,7 @@
             {
                 "id": 200020,
                 "title": "Coffee (Small)",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202601_0321_MediumCoffee_HL_1564x1564-1:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 1500,
                     "calories": 5,
@@ -379,6 +401,7 @@
             {
                 "id": 200007,
                 "title": "Baked Hot Apple Pie",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202004_0706_BakedApplePie_Broken_1564x1564-1:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 1500,
                     "calories": 230,
@@ -396,6 +419,7 @@
             {
                 "id": 200340,
                 "title": "Hash Browns",
+                "imageUrl": "https://s7d1.scene7.com/is/image/mcdonalds/DC_202211_0035_HashBrowns_Upright_1564x1564:nutrition-calculator-tile?resmode=sharp2",
                 "info": {
                     "points": 1500,
                     "calories": 140,
