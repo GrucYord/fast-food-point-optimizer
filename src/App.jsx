@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import Sidebar from './components/Sidebar';
+import Results from './components/Results';
 import solver from 'javascript-lp-solver'; 
 
 function App() {
-  const [selectedRestuarant, setSelectedRestuarant] = useState('')
+  const [selectedRestuarant, setSelectedRestuarant] = useState('mcdonalds')
   const [optimizedAttribute, setOptimizedAttribute] = useState('')
   const [optimizationType, setOptimizationType] = useState('min')
   const [constraints, setConstraints] = useState({})
@@ -37,8 +38,10 @@ function App() {
 
   return (
     <>
-      <h1>Fast Food Rewards Optimizer</h1>
       <Sidebar />
+      <Results
+        result={result}
+      />
     </>
   )
 }
