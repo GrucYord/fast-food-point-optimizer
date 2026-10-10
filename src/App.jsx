@@ -22,11 +22,15 @@ function App() {
   
   console.log(selectedRestaurant, optimizationType)
 
-  const handleResturantSelect = (e) => {
-    const restaurantTitle = e.target.value
-    const newSelectedRestaurant = restaurantData.find(restaurant => restaurant.title === restaurantTitle)
-    setSelectedRestaurant(newSelectedRestaurant)
-  }
+  const handleResturantSelect = (restaurantTitle) => {
+    const newSelectedRestaurant = restaurantData.find(
+      (restaurant) => restaurant.title === restaurantTitle
+    );
+
+    if (newSelectedRestaurant) {
+      setSelectedRestaurant(newSelectedRestaurant);
+    }
+  };
   // Convert nutrient strings into numbers
   const foods = selectedRestaurant?.foods ?? [];
 
@@ -52,6 +56,14 @@ function App() {
     ints,
   };
 
+  console.table(
+    foods.map((food) => ({
+      id: food.id,
+      title: food.title,
+      points: food.info?.points,
+      protein: food.info?.protein,
+    }))
+  );
   const result = solver.Solve(model);
 
   // Find the food details for each selected quantity
@@ -62,15 +74,22 @@ function App() {
     }))
     .filter((food) => food.quantity > 0.000001);
 
-  console.log("Result:", result)
-  console.log("recommendations:", recommendations)
+  console.log("Model:", model);
+  console.log("Solver result:", result);
 
+  if (!result.feasible) {
+    console.log("No feasible combination exists.");
+  } else if (!result.bounded) {
+    console.log("The optimization is unbounded.");
+  }
   return (
     <>
-      <Sidebar 
+      <Sidebar
         restaurantData={restaurantData}
         selectedRestaurant={selectedRestaurant}
         handleResturantSelect={handleResturantSelect}
+        optimizedAttribute={optimizedAttribute}
+        setOptimizedAttribute={setOptimizedAttribute}
         handleOptimizationTypeClick={setOptimizationType}
         constraints={constraints}
         setConstraints={setConstraints}

@@ -9,7 +9,7 @@ const Constraints = ({ variables, constraints, setConstraints }) => {
 
     setConstraints((prev) => ({
       ...prev,
-      [available]: { min: "" },
+      [available]: { min: 0 },
     }));
   };
 
@@ -56,8 +56,6 @@ const Constraints = ({ variables, constraints, setConstraints }) => {
 
   const formatLabel = (variable) =>
     variable.replaceAll("_", " ");
-
-  console.log(constraints)
   return (
     <div>
       {Object.entries(constraints).map(([key, bounds]) => (

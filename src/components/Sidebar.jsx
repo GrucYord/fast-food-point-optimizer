@@ -4,6 +4,8 @@ const Sidebar = ({
   restaurantData,
   selectedRestaurant,
   handleResturantSelect,
+  optimizedAttribute,
+  setOptimizedAttribute,
   handleOptimizationTypeClick,
   constraints,
   setConstraints,
@@ -20,13 +22,11 @@ const Sidebar = ({
     <form>
       <div>
       <h2>Restaurant</h2>
-        <select 
-          name="restuarants"
-          id="restuarants"
-          onChange={(e) =>
-            handleResturantSelect(e.target.value)
-          }
-          value={selectedRestaurant}
+        <select
+          name="restaurants"
+          id="restaurants"
+          onChange={(e) => handleResturantSelect(e.target.value)}
+          value={selectedRestaurant?.title ?? ""}
         >
           {restaurantTitles.map(restaurant => <option key={restaurant} value={restaurant}>{restaurant}</option>)}
         </select>
@@ -34,12 +34,14 @@ const Sidebar = ({
       
       <div>
       <h2>Primary Optimization</h2>
-        <select name="variables" id="variables">
+        <select
+          name="variables"
+          id="variables"
+          value={optimizedAttribute}
+          onChange={(e) => setOptimizedAttribute(e.target.value)}
+        >
           {variables.map((variable) => (
-            <option 
-              key={variable} 
-              value={variable}
-            >
+            <option key={variable} value={variable}>
               {variable}
             </option>
           ))}
