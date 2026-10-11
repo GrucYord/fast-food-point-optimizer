@@ -142,7 +142,7 @@
                     "fiber": 1,
                     "sugars": 81,
                     "calcium": 340,
-                    "iron": "0.5",
+                    "iron": 1,
                     "potassium": 690
                 }
             },
@@ -267,7 +267,7 @@
                     "cholesterol": 40,
                     "fiber": 0,
                     "sugars": 0,
-                    "calcium": "0.5",
+                    "calcium": 1,
                     "iron": 220,
                     "potassium": 0
                 }
