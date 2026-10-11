@@ -53,7 +53,7 @@ function Results({ recommendations = [], result }) {
     ["carbohydrates", "Carbohydrates", "g"],
     ["fats", "Total fat", "g"],
     ["cholesterol", "Cholesterol", "mg"],
-    ["dietary_fiber", "Dietary fiber", "g"],
+    ["fiber", "Fiber", "g"],
     ["sugars", "Total sugars", "g"],
     ["calcium", "Calcium", "mg"],
     ["iron", "Iron", "mg"],
