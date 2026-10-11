@@ -35,17 +35,18 @@ function App() {
   // Convert nutrient strings into numbers
   const foods = selectedRestaurant?.foods ?? [];
 
+  
   // Create one solver variable for each food
   const variables = Object.fromEntries(
-    foods.map((food) => [
-      String(food.id),
+    foods.map((food, index) => [
+      String(index),
       food.info,
     ])
   );
 
   // Require whole-number quantities for every food
   const ints = Object.fromEntries(
-    foods.map((food) => [String(food.id), 1])
+    foods.map((food, index) => [String(index), 1])
   );
 
   // Build the linear programming model
@@ -57,15 +58,16 @@ function App() {
     ints,
   };
 
-  console.log("Constraints:", constraints);
   const result = solver.Solve(model);
+
   // Find the food details for each selected quantity
   const recommendations = foods
-    .map((food) => ({
+    .map((food, index) => ({
       ...food,
-      quantity: result[String(food.id)] ?? 0,
+      quantity: result[String(index)] ?? 0,
     }))
     .filter((food) => food.quantity > 0.000001);
+
 
   console.log("Model:", model);
   console.log("Solver result:", result);

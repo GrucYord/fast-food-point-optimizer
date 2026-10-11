@@ -62,7 +62,7 @@ function Results({ recommendations = [], result }) {
 
       <div className="meal-grid">
         {recommendations.map((food) => (
-          <article className="food-card" key={food.id}>
+          <article className="food-card" key={food.title}>
             <div className="food-image-wrapper">
               <img
                 src={food.imageUrl}
