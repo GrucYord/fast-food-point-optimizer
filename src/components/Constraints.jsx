@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { getUnitOfMeasure} from "../scripts/units";
+import { constraintPresets } from "./constraintPresets";
 
 const Constraints = ({ variables, constraints, setConstraints }) => {
   const [selectedAttribute, setSelectedAttribute] = useState("");
@@ -47,6 +48,10 @@ const Constraints = ({ variables, constraints, setConstraints }) => {
     });
   };
 
+  const applyPreset = (preset) => {
+    setConstraints(preset.constraints);
+  };
+
   const formatLabel = (variable) =>
     variable
       .replaceAll("_", " ")
@@ -54,6 +59,19 @@ const Constraints = ({ variables, constraints, setConstraints }) => {
 
   return (
     <div className="constraints-container">
+      <div className="constraint-presets">
+        {constraintPresets.map((preset) => (
+          <button
+            key={preset.id}
+            type="button"
+            onClick={() => applyPreset(preset)}
+            title={preset.description}
+            className="btn btn-preset"
+          >
+            {preset.label}
+          </button>
+        ))}
+      </div>
       <div className="constraints-list">
         {Object.entries(constraints).map(([key, bounds]) => (
           <div key={key} className="constraint-card">

@@ -111,10 +111,10 @@ label {
 }
 
 .btn {
-  padding: 0.625rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: var(--radius-sm);
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   border: 1px solid transparent;
   cursor: pointer;
   transition: all 0.15s ease;
@@ -357,6 +357,7 @@ label {
   border-color: #bae6fd;
   color: #0369a1;
 }
+
 
 /* Responsive */
 @media (max-width: 850px) {
