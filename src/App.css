@@ -278,6 +278,7 @@ label {
 .totals-box {
   background: #ffffff;
   border: 1px solid #000000;
+  min-width: 200px;
   max-width: 400px;
   padding: 1.25rem;
 }

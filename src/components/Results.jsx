@@ -1,4 +1,4 @@
-import FoodInfoCard from "./foodInfoCard";
+import FoodInfoCard from "./FoodInfoCard";
 import DisplayOnHover from "./DisplayOnHover";
 
 function Results({ recommendations = [], result }) {
@@ -78,6 +78,10 @@ function Results({ recommendations = [], result }) {
               <p className="food-points">
                 {format((food.info?.points || 0) * food.quantity)} pts total
               </p>
+              <DisplayOnHover 
+                trigger="ⓘ"
+                content={<FoodInfoCard info={food.info} />}
+              />
             </div>
           </article>
         ))}
