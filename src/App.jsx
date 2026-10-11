@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar';
 import Results from './components/Results';
 import solver from 'javascript-lp-solver';
 import restaurantData from '../rewardsData.json';
+import './App.css';
 
 function App() {
   const [selectedRestaurant, setSelectedRestaurant] =
@@ -83,23 +84,26 @@ function App() {
     console.log("The optimization is unbounded.");
   }
   return (
-    <>
-      <Sidebar
-        restaurantData={restaurantData}
-        selectedRestaurant={selectedRestaurant}
-        handleRestaurantSelect={handleRestaurantSelect}
-        optimizedAttribute={optimizedAttribute}
-        setOptimizedAttribute={setOptimizedAttribute}
-        setOptimizationType={setOptimizationType}
-        constraints={constraints}
-        setConstraints={setConstraints}
-      />
+  <div className="app-container">
+    <Sidebar
+      restaurantData={restaurantData}
+      selectedRestaurant={selectedRestaurant}
+      handleRestaurantSelect={handleRestaurantSelect}
+      optimizedAttribute={optimizedAttribute}
+      setOptimizedAttribute={setOptimizedAttribute}
+      optimizationType={optimizationType}
+      setOptimizationType={setOptimizationType}
+      constraints={constraints}
+      setConstraints={setConstraints}
+    />
+    <main className="main-content">
       <Results
         recommendations={recommendations}
         result={result}
       />
-    </>
-  );
+    </main>
+  </div>
+);
 }
 
 export default App;
