@@ -18,16 +18,19 @@ const Sidebar = ({
     selectedRestaurant?.foods?.[0]?.info ?? {}
   );
 
+  // to add: recommended constraints (e.g))
+
   return (
     <aside className="sidebar">
       <header className="sidebar-header">
-        <h1>Fast Food Rewards</h1>
-        <p className="sidebar-subtitle">Optimizer</p>
+        <h1>Fast Food Rewards Optimizer</h1>
       </header>
 
       <form className="sidebar-form" onSubmit={(e) => e.preventDefault()}>
         <div className="form-group">
-          <label htmlFor="restaurants">Restaurant</label>
+          <label htmlFor="restaurants">
+            <h2>Restaurants</h2>
+          </label>
           <select
             name="restaurants"
             id="restaurants"
@@ -44,7 +47,9 @@ const Sidebar = ({
         </div>
 
         <div className="form-group">
-          <label htmlFor="variables">Primary Goal</label>
+          <label htmlFor="variables">
+            <h2>Optimize for</h2>
+          </label>
           <select
             name="variables"
             id="variables"
