@@ -1,27 +1,27 @@
+import { useState } from "react";
 const Constraints = ({ variables, constraints, setConstraints }) => {
-  const addConstraint = () => {
-    // Find an attribute that isn't already constrained
-    const available = variables.find(
-      (variable) => !(variable in constraints)
-    );
+  const [selectedAttribute, setSelectedAttribute] = useState("");
 
-    if (!available) return;
+  // Attributes that haven't already been added as constraints.
+  const availableAttributes = variables.filter(
+    (variable) => !(variable in constraints)
+  );
+
+  const addConstraint = () => {
+    if (
+      !selectedAttribute ||
+      selectedAttribute in constraints
+    ) {
+      return;
+    }
 
     setConstraints((prev) => ({
       ...prev,
-      [available]: { min: 0 },
+      [selectedAttribute]: { min: 0 },
     }));
-  };
 
-  const updateAttribute = (oldKey, newKey) => {
-    if (newKey === oldKey || newKey in constraints) return;
-
-    setConstraints((prev) => {
-      const next = { ...prev };
-      next[newKey] = next[oldKey];
-      delete next[oldKey];
-      return next;
-    });
+    // Reset the dropdown to the next available attribute.
+    setSelectedAttribute("");
   };
 
   const updateBound = (key, bound, value) => {
@@ -55,67 +55,74 @@ const Constraints = ({ variables, constraints, setConstraints }) => {
   };
 
   const formatLabel = (variable) =>
-    variable.replaceAll("_", " ");
+    variable
+      .replaceAll("_", " ")
+      .replace(/\b\w/g, (char) => char.toUpperCase());
+
   return (
     <div>
-      {Object.entries(constraints).map(([key, bounds]) => (
-        <div key={key} className="constraint-row">
-          <select
-            value={key}
-            onChange={(e) =>
-              updateAttribute(key, e.target.value)
-            }
-          >
-            {variables.map((variable) => (
-              <option
-                key={variable}
-                value={variable}
-                disabled={
-                  variable !== key && variable in constraints
-                }
-              >
-                {formatLabel(variable)}
-              </option>
-            ))}
-          </select>
+      <div className="constraints-list">
+        {Object.entries(constraints).map(([key, bounds]) => (
+          <div key={key} className="constraint-row">
+            <span className="constraint-label">
+              {formatLabel(key)}
+            </span>
 
-          <input
-            type="number"
-            placeholder="Min"
-            value={bounds.min ?? ""}
-            onChange={(e) =>
-              updateBound(key, "min", e.target.value)
-            }
-          />
+            <input
+              type="number"
+              placeholder="Min"
+              aria-label={`${formatLabel(key)} minimum`}
+              value={bounds.min ?? ""}
+              onChange={(e) =>
+                updateBound(key, "min", e.target.value)
+              }
+            />
 
-          <input
-            type="number"
-            placeholder="Max"
-            value={bounds.max ?? ""}
-            onChange={(e) =>
-              updateBound(key, "max", e.target.value)
-            }
-          />
+            <input
+              type="number"
+              placeholder="Max"
+              aria-label={`${formatLabel(key)} maximum`}
+              value={bounds.max ?? ""}
+              onChange={(e) =>
+                updateBound(key, "max", e.target.value)
+              }
+            />
 
-          <button
-            type="button"
-            onClick={() => removeConstraint(key)}
-            aria-label={`Remove ${formatLabel(key)} constraint`}
-          >
-            Remove
-          </button>
-        </div>
-      ))}
+            <button
+              type="button"
+              onClick={() => removeConstraint(key)}
+              aria-label={`Remove ${formatLabel(key)} constraint`}
+            >
+              Remove
+            </button>
+          </div>
+        ))}
+      </div>
 
-      <button
-        type="button"
-        onClick={addConstraint}
-        disabled={variables.every(
-          (variable) => variable in constraints
-        )}
-      >
-        + Add constraint
-      </button>
+      <div className="add-constraint">
+        <select
+          aria-label="Select attribute to constrain"
+          value={selectedAttribute}
+          onChange={(e) => setSelectedAttribute(e.target.value)}
+          disabled={availableAttributes.length === 0}
+        >
+          <option value="">Select attribute...</option>
+
+          {availableAttributes.map((variable) => (
+            <option key={variable} value={variable}>
+              {formatLabel(variable)}
+            </option>
+          ))}
+        </select>
+
+        <button
+          type="button"
+          onClick={addConstraint}
+          disabled={!selectedAttribute}
+        >
+          + Add constraint
+        </button>
+      </div>
     </div>
   );
 };
