@@ -46,9 +46,9 @@ function Results({ recommendations = [] }) {
           <article className="food-item" key={food.id}>
             <div>
               <h3>{food.title}</h3>
+              <img src={food.imageUrl} width="100" height="100"/>
               <p>Quantity: {food.quantity}</p>
             </div>
-
             <p>
               {format(food.info.points * food.quantity)} points
             </p>
