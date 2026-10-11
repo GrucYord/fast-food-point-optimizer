@@ -1,3 +1,5 @@
+import FoodInfoCard from "./foodInfoCard";
+
 function Results({ recommendations = [], result }) {
   if (result && !result.feasible) {
     return (
@@ -48,19 +50,6 @@ function Results({ recommendations = [], result }) {
     return acc;
   }, {});
 
-  const nutrients = [
-    ["calories", "Calories", "kcal"],
-    ["protein", "Protein", "g"],
-    ["carbohydrates", "Carbohydrates", "g"],
-    ["fats", "Total fat", "g"],
-    ["cholesterol", "Cholesterol", "mg"],
-    ["fiber", "Fiber", "g"],
-    ["sugars", "Total sugars", "g"],
-    ["calcium", "Calcium", "mg"],
-    ["iron", "Iron", "mg"],
-    ["potassium", "Potassium", "mg"],
-  ];
-
   const format = (value) => Number((value || 0).toFixed(1)).toLocaleString();
 
   return (
@@ -92,23 +81,10 @@ function Results({ recommendations = [], result }) {
       </div>
 
       {/* Simple Black and White List Box */}
-      <div className="totals-box">
-        <h3 className="totals-box-title">Meal Summary</h3>
-        <ul className="totals-list">
-          <li className="totals-item">
-            <span className="totals-label">Reward Points</span>
-            <span className="totals-value">{format(totals.points || 0)}</span>
-          </li>
-          {nutrients.map(([key, label, unit]) => (
-            <li className="totals-item" key={key}>
-              <span className="totals-label">{label}</span>
-              <span className="totals-value">
-                {format(totals[key] || 0)} <span className="totals-unit">{unit}</span>
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <FoodInfoCard 
+        header="Nutrient Summary"
+        info={totals}
+      />
     </section>
   );
 }
