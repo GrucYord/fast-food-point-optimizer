@@ -275,56 +275,68 @@ label {
   font-weight: 600;
 }
 
-/* Totals Metrics Grid */
-.totals-section h3 {
+/* Black & White List Box */
+.totals-box {
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  max-width: 400px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.totals-box-title {
   font-size: 1.1rem;
-  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #000000;
 }
 
-.totals-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 1rem;
+.totals-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.total-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  padding: 1rem;
+.totals-item {
   display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  box-shadow: var(--shadow-sm);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 0.9rem;
+  color: #000000;
 }
 
-.total-card.primary {
-  background: var(--primary);
-  color: #ffffff;
-  border-color: var(--primary);
+.totals-item:last-child {
+  border-bottom: none;
 }
 
-.total-card.primary .total-label {
-  color: rgba(255, 255, 255, 0.8);
+.totals-item.primary {
+  font-weight: 700;
+  border-bottom: 1px solid #000000;
 }
 
-.total-label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  text-transform: uppercase;
+.totals-label {
+  font-weight: 500;
 }
 
-.total-value {
-  font-size: 1.25rem;
+.totals-item.primary .totals-label {
   font-weight: 700;
 }
 
-.total-value small {
-  font-size: 0.85rem;
-  font-weight: 400;
+.totals-value {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
 }
 
+.totals-unit {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #666666;
+}
 /* Alerts */
 .alert {
   padding: 1.25rem;

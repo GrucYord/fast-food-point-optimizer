@@ -21,8 +21,8 @@ function Results({ recommendations = [], result }) {
         <div className="alert alert-warning">
           <strong>Unbounded Optimization</strong>
           <p>
-            The optimization function can scale infinitely. Add a ceiling constraint
-            on points, calories, or item quantities.
+            The optimization function can scale infinitely. Add a limit on
+            points, calories, or item quantities.
           </p>
         </div>
       </section>
@@ -40,6 +40,7 @@ function Results({ recommendations = [], result }) {
     );
   }
 
+  // Calculate totals across all recommended foods
   const totals = recommendations.reduce((acc, food) => {
     Object.entries(food.info).forEach(([key, value]) => {
       acc[key] = (acc[key] || 0) + value * food.quantity;
@@ -60,7 +61,7 @@ function Results({ recommendations = [], result }) {
     ["potassium", "Potassium", "mg"],
   ];
 
-  const format = (value) => Number(value.toFixed(2)).toLocaleString();
+  const format = (value) => Number((value || 0).toFixed(1)).toLocaleString();
 
   return (
     <section className="results">
@@ -74,7 +75,7 @@ function Results({ recommendations = [], result }) {
           <article className="food-card" key={food.id}>
             <div className="food-image-wrapper">
               <img
-                src={food.imageUrl || "https://via.placeholder.com/120"}
+                src={food.imageUrl}
                 alt={food.title}
                 className="food-image"
               />
@@ -90,23 +91,23 @@ function Results({ recommendations = [], result }) {
         ))}
       </div>
 
-      <div className="totals-section">
-        <h3>Meal Summary Totals</h3>
-        <div className="totals-grid">
-          <div className="total-card primary">
-            <span className="total-label">Reward Points</span>
-            <span className="total-value">{format(totals.points || 0)}</span>
-          </div>
-
+      {/* Simple Black and White List Box */}
+      <div className="totals-box">
+        <h3 className="totals-box-title">Meal Summary</h3>
+        <ul className="totals-list">
+          <li className="totals-item">
+            <span className="totals-label">Reward Points</span>
+            <span className="totals-value">{format(totals.points || 0)}</span>
+          </li>
           {nutrients.map(([key, label, unit]) => (
-            <div className="total-card" key={key}>
-              <span className="total-label">{label}</span>
-              <span className="total-value">
-                {format(totals[key] || 0)} <small>{unit}</small>
+            <li className="totals-item" key={key}>
+              <span className="totals-label">{label}</span>
+              <span className="totals-value">
+                {format(totals[key] || 0)} <span className="totals-unit">{unit}</span>
               </span>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );
