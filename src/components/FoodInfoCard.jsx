@@ -1,3 +1,5 @@
+import units from "../data/units";
+
 const FoodInfoCard = ({
   header = "Nutrition Facts",
   info,
@@ -16,19 +18,6 @@ const FoodInfoCard = ({
       maximumFractionDigits: 1,
     });
   };
-  const units = [
-    ["points", "Points", ""],
-    ["calories", "Calories", "kcal"],
-    ["protein", "Protein", "g"],
-    ["carbohydrates", "Carbohydrates", "g"],
-    ["fats", "Total fat", "g"],
-    ["cholesterol", "Cholesterol", "mg"],
-    ["fiber", "Fiber", "g"],
-    ["sugars", "Total sugars", "g"],
-    ["calcium", "Calcium", "mg"],
-    ["iron", "Iron", "mg"],
-    ["potassium", "Potassium", "mg"],
-  ];
 
   return <div className="totals-box">
     <h3 className="totals-box-title">{header}</h3>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {units, getUnitOfMeasure} from "../scripts/units";
 
 const Constraints = ({ variables, constraints, setConstraints }) => {
   const [selectedAttribute, setSelectedAttribute] = useState("");
@@ -18,6 +19,7 @@ const Constraints = ({ variables, constraints, setConstraints }) => {
     setSelectedAttribute("");
   };
 
+  
   const updateBound = (key, bound, value) => {
     setConstraints((prev) => {
       const updated = { ...prev[key] };
@@ -28,17 +30,14 @@ const Constraints = ({ variables, constraints, setConstraints }) => {
         updated[bound] = Number(value);
       }
 
-      const next = { ...prev };
-
-      if (Object.keys(updated).length === 0) {
-        delete next[key];
-      } else {
-        next[key] = updated;
-      }
-
-      return next;
+      // Keep the constraint even if both bounds are empty.
+      return {
+        ...prev,
+        [key]: updated,
+      };
     });
   };
+
 
   const removeConstraint = (key) => {
     setConstraints((prev) => {
@@ -59,7 +58,7 @@ const Constraints = ({ variables, constraints, setConstraints }) => {
         {Object.entries(constraints).map(([key, bounds]) => (
           <div key={key} className="constraint-card">
             <div className="constraint-header">
-              <span className="constraint-label">{formatLabel(key)}</span>
+              <span className="constraint-label">{formatLabel(key)} {getUnitOfMeasure(key) && `(${getUnitOfMeasure(key)})`}</span>
               <button
                 type="button"
                 className="btn-link-danger"
@@ -78,6 +77,7 @@ const Constraints = ({ variables, constraints, setConstraints }) => {
                   placeholder="Min"
                   aria-label={`${formatLabel(key)} minimum`}
                   value={bounds.min ?? ""}
+                  min={0}
                   onChange={(e) => updateBound(key, "min", e.target.value)}
                 />
               </div>
@@ -88,6 +88,7 @@ const Constraints = ({ variables, constraints, setConstraints }) => {
                   placeholder="Max"
                   aria-label={`${formatLabel(key)} maximum`}
                   value={bounds.max ?? ""}
+                  min={0}
                   onChange={(e) => updateBound(key, "max", e.target.value)}
                 />
               </div>
