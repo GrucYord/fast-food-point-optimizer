@@ -158,7 +158,6 @@ label {
 .constraint-card {
   background: var(--bg-app);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-sm);
   padding: 0.75rem;
   display: flex;
   flex-direction: column;
@@ -279,10 +278,8 @@ label {
 .totals-box {
   background: #ffffff;
   border: 1px solid #000000;
-  border-radius: 6px;
   max-width: 400px;
   padding: 1.25rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .totals-box-title {
