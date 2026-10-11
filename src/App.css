@@ -307,7 +307,11 @@ label {
   font-size: 0.9rem;
   color: #000000;
 }
+.totals-item.compact {
+  padding: 0;
+  font-size: 0.85rem;
 
+}
 .totals-item:last-child {
   border-bottom: none;
 }

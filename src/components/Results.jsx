@@ -80,7 +80,7 @@ function Results({ recommendations = [], result }) {
               </p>
               <DisplayOnHover 
                 trigger="ⓘ"
-                content={<FoodInfoCard info={food.info} />}
+                content={<FoodInfoCard header="One serving" info={food.info} compact={true}/>}
               />
             </div>
           </article>

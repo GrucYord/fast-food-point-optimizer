@@ -17,7 +17,7 @@ function App() {
     useState('min');
 
   const [constraints, setConstraints] = useState({
-    protein: { min: 30 },
+    protein: { min: 40 },
     calories: { max: 800 },
   });
   
@@ -57,16 +57,8 @@ function App() {
     ints,
   };
 
-  console.table(
-    foods.map((food) => ({
-      id: food.id,
-      title: food.title,
-      points: food.info?.points,
-      protein: food.info?.protein,
-    }))
-  );
+  console.log("Constraints:", constraints);
   const result = solver.Solve(model);
-
   // Find the food details for each selected quantity
   const recommendations = foods
     .map((food) => ({
