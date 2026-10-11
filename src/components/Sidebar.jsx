@@ -3,10 +3,10 @@ import Constraints from "./Constraints"
 const Sidebar = ({
   restaurantData,
   selectedRestaurant,
-  handleResturantSelect,
+  handleRestaurantSelect,
   optimizedAttribute,
   setOptimizedAttribute,
-  handleOptimizationTypeClick,
+  setOptimizationType,
   constraints,
   setConstraints,
 }) => {
@@ -25,7 +25,7 @@ const Sidebar = ({
         <select
           name="restaurants"
           id="restaurants"
-          onChange={(e) => handleResturantSelect(e.target.value)}
+          onChange={(e) => handleRestaurantSelect(e.target.value)}
           value={selectedRestaurant?.title ?? ""}
         >
           {restaurantTitles.map(restaurant => <option key={restaurant} value={restaurant}>{restaurant}</option>)}
@@ -48,13 +48,13 @@ const Sidebar = ({
         </select>
         <button
           type="button"
-          onClick={() => handleOptimizationTypeClick("min")}
+          onClick={() => setOptimizationType("min")}
         >
           Minimize
         </button>
         <button
           type="button"
-          onClick={() => handleOptimizationTypeClick("max")}
+          onClick={() => setOptimizationType("max")}
         >
           Maximize
         </button>
