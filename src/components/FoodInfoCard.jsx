@@ -1,4 +1,4 @@
-import units from "../data/units";
+import units from "../scripts/units";
 
 const FoodInfoCard = ({
   header = "Nutrition Facts",

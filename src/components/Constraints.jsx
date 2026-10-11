@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {units, getUnitOfMeasure} from "../scripts/units";
+import { getUnitOfMeasure} from "../scripts/units";
 
 const Constraints = ({ variables, constraints, setConstraints }) => {
   const [selectedAttribute, setSelectedAttribute] = useState("");

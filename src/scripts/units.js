@@ -3,7 +3,7 @@ const units = [
     ["calories", "Calories", "kcal"],
     ["protein", "Protein", "g"],
     ["carbohydrates", "Carbohydrates", "g"],
-    ["fats", "Total fat", "g"],
+    ["fats", "Total fats", "g"],
     ["cholesterol", "Cholesterol", "mg"],
     ["fiber", "Fiber", "g"],
     ["sugars", "Total sugars", "g"],
