@@ -1,3 +1,5 @@
+import DisplayOnHover from "./DisplayOnHover";
+
 function Results({ recommendations = [], result }) {
   if (result && !result.feasible) {
     return (
@@ -82,7 +84,9 @@ function Results({ recommendations = [], result }) {
               <span className="quantity-badge">{food.quantity}×</span>
             </div>
             <div className="food-details">
-              <h3>{food.title}</h3>
+              <h3>
+                {food.title}
+              </h3>
               <p className="food-points">
                 {format((food.info?.points || 0) * food.quantity)} pts total
               </p>
