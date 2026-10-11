@@ -1,10 +1,34 @@
 
-function Results({ recommendations = [] }) {
+function Results({ recommendations = [], result }) {
+  if (result && !result.feasible) {
+    return (
+      <section className="results">
+        <h2>Recommended Meal</h2>
+        <p>
+          No feasible meal satisfies all your constraints.
+          Try relaxing a minimum or increasing a maximum.
+        </p>
+      </section>
+    );
+  }
+
+  if (result && !result.bounded) {
+    return (
+      <section className="results">
+        <h2>Recommended Meal</h2>
+        <p>
+          The optimization is unbounded. Add a limit on
+          points, quantities, or another relevant attribute.
+        </p>
+      </section>
+    );
+  }
+
   if (recommendations.length === 0) {
     return (
       <section className="results">
         <h2>Recommended Meal</h2>
-        <p>No foods recommended. Try adjusting your constraints.</p>
+        <p>No positive food quantities were recommended.</p>
       </section>
     );
   }
@@ -46,7 +70,12 @@ function Results({ recommendations = [] }) {
           <article className="food-item" key={food.id}>
             <div>
               <h3>{food.title}</h3>
-              <img src={food.imageUrl} width="100" height="100"/>
+              <img 
+                src={food.imageUrl} 
+                alt={food.title}
+                width={100}
+                height={100}
+              />
               <p>Quantity: {food.quantity}</p>
             </div>
             <p>

@@ -22,7 +22,7 @@ function App() {
   
   console.log(selectedRestaurant, optimizationType)
 
-  const handleResturantSelect = (restaurantTitle) => {
+  const handleRestaurantSelect = (restaurantTitle) => {
     const newSelectedRestaurant = restaurantData.find(
       (restaurant) => restaurant.title === restaurantTitle
     );
@@ -87,14 +87,17 @@ function App() {
       <Sidebar
         restaurantData={restaurantData}
         selectedRestaurant={selectedRestaurant}
-        handleResturantSelect={handleResturantSelect}
+        handleRestaurantSelect={handleRestaurantSelect}
         optimizedAttribute={optimizedAttribute}
         setOptimizedAttribute={setOptimizedAttribute}
-        handleOptimizationTypeClick={setOptimizationType}
+        setOptimizationType={setOptimizationType}
         constraints={constraints}
         setConstraints={setConstraints}
       />
-      <Results recommendations={recommendations} />
+      <Results
+        recommendations={recommendations}
+        result={result}
+      />
     </>
   );
 }
